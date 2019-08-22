@@ -1,22 +1,17 @@
 import React from "react";
+import { Layout } from "antd";
+import Header from "./layout/Header";
 import "App.scss";
 
 const App: React.FC = () => {
+  const { Footer, Content } = Layout;
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header>Header</Header>
+        <Content>Content</Content>
+        <Footer>Footer</Footer>
+      </Layout>
     </div>
   );
 };
